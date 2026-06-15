@@ -490,12 +490,13 @@ export const useLeafletMapsBase = ({
       await semaphore.acquire();
 
       if (el.value && el.value.isConnected && isEnabled) {
-        const [_L, _] = await Promise.all([
+        const [LmaybeDefault] = await Promise.all([
           import("leaflet"),
           import("leaflet/dist/leaflet.css"),
         ]);
 
-        console.log(_);
+        // sometimes we get {default} sometimes not
+        const _L = LmaybeDefault.default ?? LmaybeDefault;
 
         // test what happens if unmount happens before this all finishes
         // would a semaphore help here? tbc
