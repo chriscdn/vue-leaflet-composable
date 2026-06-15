@@ -1,0 +1,44 @@
+{
+  "name": "@chriscdn/vue-leaflet-composable",
+  "version": "0.0.0",
+  "description": "A Vue and Nuxt composable for rendering Leaflet maps.",
+  "author": "Christopher Meyer <chris@schwiiz.org>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriscdn/vue-leaflet-composable.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": "./lib/index.js",
+  "scripts": {
+    "build": "tsup",
+    "watch": "yarn build --watch",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@chriscdn/promise-semaphore": "^4.0.0",
+    "@chriscdn/to-number": "^2.1.1",
+    "core-js": "^3.49.0"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.9.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/leaflet": "^1.9.21",
+    "leaflet": "^1.9.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vue": "^3.5.38"
+  },
+  "keywords": [
+    "vue",
+    "leaflet"
+  ],
+  "files": [
+    "lib"
+  ]
+}
