@@ -2,8 +2,6 @@
  * useLeafletMapsBase
  */
 
-import "leaflet/dist/leaflet.css";
-
 import { onBeforeUnmount, onMounted, type Ref } from "vue";
 import { isNumber } from "@chriscdn/to-number";
 import { Semaphore } from "@chriscdn/promise-semaphore";
@@ -492,7 +490,12 @@ export const useLeafletMapsBase = ({
       await semaphore.acquire();
 
       if (el.value && el.value.isConnected && isEnabled) {
-        const _L = await import("leaflet");
+        const [_L, _] = await Promise.all([
+          import("leaflet"),
+          import("leaflet/dist/leaflet.css"),
+        ]);
+
+        console.log(_);
 
         // test what happens if unmount happens before this all finishes
         // would a semaphore help here? tbc
