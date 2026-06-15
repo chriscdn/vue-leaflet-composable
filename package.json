@@ -19,8 +19,7 @@
   },
   "dependencies": {
     "@chriscdn/promise-semaphore": "^4.0.0",
-    "@chriscdn/to-number": "^2.1.1",
-    "core-js": "^3.49.0"
+    "@chriscdn/to-number": "^2.1.1"
   },
   "peerDependencies": {
     "leaflet": "^1.9.0",

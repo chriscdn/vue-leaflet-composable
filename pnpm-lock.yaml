@@ -213,9 +213,6 @@ importers:
       '@chriscdn/to-number':
         specifier: ^2.1.1
         version: 2.1.1
-      core-js:
-        specifier: ^3.49.0
-        version: 3.49.0
     devDependencies:
       '@tsconfig/strictest':
         specifier: ^2.0.8
@@ -641,9 +638,6 @@ packages:
   consola@3.4.2:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
-
-  core-js@3.49.0:
-    resolution: {integrity: sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==}
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
@@ -1116,8 +1110,6 @@ snapshots:
   confbox@0.1.8: {}
 
   consola@3.4.2: {}
-
-  core-js@3.49.0: {}
 
   csstype@3.2.3: {}
 

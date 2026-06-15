@@ -1,17 +1,13 @@
 /**
  * useLeafletMapsBase
- *
- * Version: 0.0.8
- *
- * Last Updated: 2026-06-11
- *
  */
-import "core-js/actual/promise/with-resolvers";
+
 import "leaflet/dist/leaflet.css";
 
 import { onBeforeUnmount, onMounted, type Ref } from "vue";
 import { isNumber } from "@chriscdn/to-number";
 import { Semaphore } from "@chriscdn/promise-semaphore";
+import { withResolvers } from "./withResolvers";
 
 type Leaflet = typeof import("leaflet");
 export type Marker = L.Marker | L.CircleMarker;
@@ -43,9 +39,9 @@ const createLeafletLoadManager = (isEnabled: boolean) => {
     // never rejected since we want to fail silently if an error occurs during
     // mount.
     //
-    const leafletReady = Promise.withResolvers<Leaflet | null>();
-    const mapReady = Promise.withResolvers<L.Map | null>();
-    const mapTilesReady = Promise.withResolvers<L.TileLayer | null>();
+    const leafletReady = withResolvers<Leaflet | null>();
+    const mapReady = withResolvers<L.Map | null>();
+    const mapTilesReady = withResolvers<L.TileLayer | null>();
 
     const withLeaflet = <T>(fn: (L: Leaflet) => T | Promise<T>) =>
       leafletReady.promise.then((L) => L && fn(L));
