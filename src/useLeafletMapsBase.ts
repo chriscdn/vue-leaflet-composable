@@ -196,6 +196,8 @@ export const useLeafletMapsBase = ({
     markerMap.clear();
   };
 
+  const getMarkers = () => markers;
+
   /** --- Popup functions --- */
 
   const showPopup = (id: string, el: HTMLElement) => {
@@ -584,5 +586,6 @@ export const useLeafletMapsBase = ({
     withMapTilesLoaded,
     zoomToBounds,
     zoomToID,
+    getMarkers,
   };
 };

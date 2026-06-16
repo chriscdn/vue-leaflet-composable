@@ -66,6 +66,7 @@ declare const useLeafletMapsBase: ({ el, center, zoom, leafletOptions, duration,
         yoffset?: number;
         duration?: number;
     }) => Promise<void | null>;
+    getMarkers: () => Marker[];
 };
 
 export { type LeafletMapsBaseOptions, type Marker, useLeafletMapsBase };
