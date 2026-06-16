@@ -1,6 +1,6 @@
 {
   "name": "@chriscdn/vue-leaflet-composable",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Vue and Nuxt composable for rendering Leaflet maps.",
   "author": "Christopher Meyer <chris@schwiiz.org>",
   "repository": {
